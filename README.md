@@ -1,2 +1,5 @@
 # GMT351-Final-Project
-# Ayça Tabakoğlu
+# Team Members 
+  Ayça Tabakoğlu
+  Zeynep Miray Ertunç
+  Ekin Gönenç Uygun
