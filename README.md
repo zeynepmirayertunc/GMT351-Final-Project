@@ -6,6 +6,6 @@
   Zeynep Miray Ertunç -21733064
   
   
-  Ekin Gönenç Uygun
+  Ekin Gönenç Uygun - 21733356
   
  # Project Description: 
