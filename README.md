@@ -9,4 +9,4 @@
   Ekin Gönenç Uygun - 21733356
   
  # Project Description: 
- Estimating Building Height Using LiDAR data, Pgpointcloud and Postgresql.
+The purpose of this project is finding buildings' height by using LiDAR data and PostgreSQL. 
