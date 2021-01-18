@@ -1,6 +1,5 @@
 
 # *GMT351-Final-Project* 
-# *GMT351-Final-Project* 
 
   
  ### Project Description: 
