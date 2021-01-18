@@ -16,3 +16,4 @@
  
 ![3d](https://user-images.githubusercontent.com/69868488/104953758-11b7d380-59d8-11eb-80b7-1143f35bc96e.png)
 ![binalar2](https://user-images.githubusercontent.com/50514082/104956596-85a8aa80-59dd-11eb-9664-d9e0a4ce0432.png)
+![ekin](https://user-images.githubusercontent.com/50514082/104959475-5137ed00-59e3-11eb-87a9-8d7f07a83c60.png)
