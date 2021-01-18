@@ -4,7 +4,7 @@
 > The purpose of this project is finding buildings' height by using LiDAR data
 
 ### What we use: 
-- Docker 
+- Docker href="https://www.docker.com/" target="_blank"> <img src="https://miro.medium.com/max/336/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="Docker" width="25" 
 - Pdal
 - pgPointCloud
 
