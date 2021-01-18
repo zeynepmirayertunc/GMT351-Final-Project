@@ -14,5 +14,4 @@
  ### Database management system  we use:
  - PostgreSQL
  
-![alt text](https://github.com/[zeynepmirayertunc]/[GMT351-Final-Project]/blob/[branch]/3d.png?raw=true)
-
+![3d](https://user-images.githubusercontent.com/69868488/104953758-11b7d380-59d8-11eb-80b7-1143f35bc96e.png)
