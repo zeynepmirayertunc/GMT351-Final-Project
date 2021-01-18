@@ -13,6 +13,5 @@
 
  ### Database management system  we use:
  - PostgreSQL
- 
-![3d.png]
+
 
