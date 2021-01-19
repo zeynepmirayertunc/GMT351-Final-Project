@@ -18,18 +18,25 @@ This project has been prepared by Hacettepe University Geomatics Engineering stu
   
  ### LiDAR data in PostgreSQL
  
-'''SELECT Count(*), Sum(PC_NumPoints(pa)) FROM lidar;'''
+```sql
+SELECT Count(*), Sum(PC_NumPoints(pa)) FROM lidar;
+```
+Create a spatial index
 
+```sql
+CREATE INDEX lidar_env_pkey ON lidar USING GIST(PC_EnvelopeGeometry(pa));
+```
+converting the geomtery column for the same SRID of the lidar table
+```sql
+ALTER TABLE osm ALTER COLUMN geom TYPE geometry(MultiPolygon,5257) USING ST_Transform(ST_SetSRID( geom,5257) , 5257);
+CREATE INDEX osm_5257_pkey ON osm USING GIST (geom);
+```
 
->CREATE INDEX lidar_env_pkey ON lidar USING GIST(PC_EnvelopeGeometry(pa));
-
-
->ALTER TABLE osm ALTER COLUMN geom TYPE geometry(MultiPolygon,5257) USING ST_Transform(ST_SetSRID( geom,5257) , 5257);
->CREATE INDEX osm_5257_pkey ON osm USING GIST (geom);
-
-
->ALTER TABLE osm ADD COLUMN pa pcpatch(1);
-
+Store the pointcloud patch that overlays each building footprint polygon
+```sql
+ALTER TABLE osm ADD COLUMN pa pcpatch(1);
+UPDATE osm SET patch = sq.pa FROM (WITH patches AS (SELECT o.gid AS gid, o.geom AS geom, l.pa AS pa FROM lidar AS l JOIN osm AS o ON PC_INTERSECTS(l.pa, o.geom)) SELECT gid, PC_INTERSECTION(PC_UNION(pa), geom) AS pa FROM patches GROUP BY gid, geom) AS sq WHERE osm.gid = sq.gid;
+```
  
 ![3d](https://user-images.githubusercontent.com/69868488/104953758-11b7d380-59d8-11eb-80b7-1143f35bc96e.png)
 ![binalar2](https://user-images.githubusercontent.com/50514082/104956596-85a8aa80-59dd-11eb-9664-d9e0a4ce0432.png)
