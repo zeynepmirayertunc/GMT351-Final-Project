@@ -1,0 +1,15 @@
+{
+  "pipeline":[
+    {
+      "type":"readers.las",
+      "filename":"/home/ayca/laz/LIDAR/Trabzon/Tonya/Tonya.laz",
+      "spatialreference":"EPSG:5257"
+    },
+    {
+      "type":"writers.text",
+      "format":"csv",
+      "keep_unspecified":"true",
+      "filename":"/home/ayca/laz/Tonyalaz.txt"
+    }
+  ]
+}
