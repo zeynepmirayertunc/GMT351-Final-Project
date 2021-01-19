@@ -35,7 +35,7 @@ UPDATE osm_outline SET z_ground = sq.z_min FROM (WITH patches AS (SELECT o.gid A
 ```sql
 ALTER TABLE osm ADD COLUMN z_ground DOUBLE PRECISION NULL, ADD COLUMN height_avg DOUBLE PRECISION NULL, ADD COLUMN height_median DOUBLE PRECISION NULL, ADD COLUMN height_max DOUBLE PRECISION NULL;
 UPDATE osm AS o SET z_ground = oo.z_ground FROM osm_outline oo WHERE o.gid = oo.gid;
-UPDATE osm SET height_avg = (z_avg - z_ground), height_median = (z_median - z_ground), height_max = (z_max - z_ground);
+UPDATE osm SET height_avg = (z_avg - z_ground), height_median = (z_median - z_ground), height_max = (z_max -z_ground);
 ```
 
 
