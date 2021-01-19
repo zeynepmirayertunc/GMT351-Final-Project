@@ -18,9 +18,7 @@ This project has been prepared by Hacettepe University Geomatics Engineering stu
   
  ### LiDAR data in PostgreSQL
  
-'''
-SELECT Count(*), Sum(PC_NumPoints(pa)) FROM lidar;
-'''
+'''SELECT Count(*), Sum(PC_NumPoints(pa)) FROM lidar;'''
 
 
 >CREATE INDEX lidar_env_pkey ON lidar USING GIST(PC_EnvelopeGeometry(pa));
