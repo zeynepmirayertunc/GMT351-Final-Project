@@ -1,0 +1,19 @@
+{
+  "pipeline":[
+    {
+      "type":"readers.las",
+      "spatialreference":"EPSG:26910"
+      
+    },
+    {
+      "type":"filters.chipper",
+      "capacity":600
+    },
+    {
+      "type":"writers.pgpointcloud",
+      "connection":"host='pgpointcloud' dbname='pointclouds' user='postgres' password='mysecretpassword' port='5432'",
+      "compression":"dimensional",
+      "srid":"26910"
+    }
+  ]
+}
