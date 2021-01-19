@@ -1,7 +1,7 @@
 # *GMT351-Final-Project* 
   
  ### Project Description: 
-> The purpose of this project is finding buildings' height by using LiDAR data
+The purpose of this project is finding buildings' height by using LiDAR data
 
 ### About
 
