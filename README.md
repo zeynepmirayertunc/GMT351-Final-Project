@@ -19,10 +19,17 @@ This project has been prepared by Hacettepe University Geomatics Engineering stu
  ### LiDAR data in PostgreSQL
  
 > SELECT Count(*), Sum(PC_NumPoints(pa)) FROM lidar;
+
+
 >CREATE INDEX lidar_env_pkey ON lidar USING GIST(PC_EnvelopeGeometry(pa));
+
+
 >ALTER TABLE osm ALTER COLUMN geom TYPE geometry(MultiPolygon,5257) USING ST_Transform(ST_SetSRID( geom,5257) , 5257);
 >CREATE INDEX osm_5257_pkey ON osm USING GIST (geom);
+
+
 >ALTER TABLE osm ADD COLUMN pa pcpatch(1);
+
  
 ![3d](https://user-images.githubusercontent.com/69868488/104953758-11b7d380-59d8-11eb-80b7-1143f35bc96e.png)
 ![binalar2](https://user-images.githubusercontent.com/50514082/104956596-85a8aa80-59dd-11eb-9664-d9e0a4ce0432.png)
