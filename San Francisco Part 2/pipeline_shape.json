@@ -1,0 +1,15 @@
+{
+  "pipeline":[
+    {
+      "type":"readers.las",
+      "filename":"/home/ekin/desktop/proje/laz/ARRA-CA_GoldenGate_2010_000776.laz",
+      "spatialreference":"EPSG:26910"
+    },
+    {
+      "type":"writers.text",
+      "format":"csv",
+      "keep_unspecified":"true",
+      "filename":"/home/ekin/desktop/proje/laz/ARRA-CA_GoldenGate_2010_000776.shp.txt"
+    }
+  ]
+}
