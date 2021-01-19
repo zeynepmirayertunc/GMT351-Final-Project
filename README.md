@@ -3,6 +3,10 @@
  ### Project Description: 
 > The purpose of this project is finding buildings' height by using LiDAR data
 
+### About
+
+This project has been prepared by Hacettepe University Geomatics Engineering students for the GMT351 course final project.
+
 ### What we use: 
 - [Docker](https://www.docker.com/)  <p align="left"> <a href="https://www.docker.com/" target="_blank"> <img src="https://miro.medium.com/max/336/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="docker" width="25" height="25"/> 
   
